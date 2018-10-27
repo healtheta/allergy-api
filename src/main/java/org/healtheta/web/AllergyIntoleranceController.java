@@ -61,9 +61,9 @@ public class AllergyIntoleranceController {
     public ResponseEntity<?> read(@PathVariable String id){
         try{
             Long lId = Long.parseLong(id);
-            AllergyIntolerance condition = allergyIntoleranceRepo.findAllergyIntoleranceById(lId);
-            if(condition != null){
-                return new ResponseEntity<AllergyIntolerance>(condition, HttpStatus.OK);
+            AllergyIntolerance allergyIntolerance = allergyIntoleranceRepo.findAllergyIntoleranceById(lId);
+            if(allergyIntolerance != null){
+                return new ResponseEntity<AllergyIntolerance>(allergyIntolerance, HttpStatus.OK);
             }else{
                 return new ResponseEntity<OperationOutcome>(OperationOutcome.RecordNotFound(), HttpStatus.NOT_FOUND);
             }
