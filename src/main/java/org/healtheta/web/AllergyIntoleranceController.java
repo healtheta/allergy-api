@@ -16,7 +16,7 @@ import javax.persistence.Id;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/allergy")
+@RequestMapping(value = "/")
 public class AllergyIntoleranceController {
     @Autowired
     AllergyIntoleranceRepo allergyIntoleranceRepo;
